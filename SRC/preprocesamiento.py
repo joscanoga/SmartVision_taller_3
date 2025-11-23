@@ -48,9 +48,30 @@ def normalizacion_min_max(imagen):
 
     return imagen_normalizada
 
-def preprocesar_imagen(ruta):
-    with Image.open(ruta) as img:
+def preprocesar_imagen(ruta_o_imagen):
+    """Preprocesa una imagen.
+
+    Parámetros:
+    - ruta_o_imagen: str (ruta al archivo) o un objeto PIL.Image
+
+    Devuelve:
+    - PIL.Image procesada (RGB, tamaño normalizado, normalización min-max)
+    """
+    cerrado_local = False
+    if isinstance(ruta_o_imagen, Image.Image):
+        img = ruta_o_imagen.copy()
+    else:
+        img = Image.open(ruta_o_imagen)
+        cerrado_local = True
+
+    try:
         img = img.convert("RGB")  # Asegurarse de que la imagen esté en modo RGB
         img_normalizada = normalizar_tamano(img)
         img_normalizada = normalizacion_min_max(img_normalizada)
         return img_normalizada
+    finally:
+        if cerrado_local:
+            try:
+                img.close()
+            except Exception:
+                pass
