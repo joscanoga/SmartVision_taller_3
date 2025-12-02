@@ -1,0 +1,7 @@
+ruta,clase,original_size,normalized_size,original_width,original_height,normalized_width,normalized_height
+data/original/train/NORMAL/IM-0648-0001.jpeg,NORMAL,1604x1279,512x512,1604,1279,512,512
+data/original/train/NORMAL/IM-0467-0001-0002.jpeg,NORMAL,1634x1372,512x512,1634,1372,512,512
+data/original/train/NORMAL/NORMAL2-IM-0535-0001-0002.jpeg,NORMAL,1192x862,512x512,1192,862,512,512
+data/original/train/PNEUMONIA/person1253_virus_2129.jpeg,PNEUMONIA,1064x632,512x512,1064,632,512,512
+data/original/train/PNEUMONIA/person1563_bacteria_4092.jpeg,PNEUMONIA,1272x872,512x512,1272,872,512,512
+data/original/train/PNEUMONIA/person841_virus_1481.jpeg,PNEUMONIA,1284x878,512x512,1284,878,512,512
