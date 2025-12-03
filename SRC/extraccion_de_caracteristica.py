@@ -200,3 +200,5 @@ def extraer_descriptores_gabor(img_gray):
             features.extend([mean, std])
             
     return features
+
+
